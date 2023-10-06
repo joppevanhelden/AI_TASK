@@ -40,12 +40,13 @@ problem = CspProblem(variables, domains, constraints)
 
 if st.button("Calculate"):
     output = backtrack(problem)
+    result = "solution: " + output
     
     if output is not None:
         table_data = []
         for word in [word1, word2, word3]:
             table_data.append([word, ''.join([str(output[letter]) for letter in word])])
-        st.text("Solution:", output)
+        st.text(result)
         st.table(table_data)
     else:
         st.error("No solution found for the given puzzle.")
