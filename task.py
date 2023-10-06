@@ -1,5 +1,6 @@
-from simpleai.search import CspProblem, backtrack
 import streamlit as st
+from simpleai.search import CspProblem, backtrack
+
 
 # Title & Header
 st.title("CryptoArithmetic Puzzle")
@@ -44,7 +45,7 @@ if st.button("Calculate"):
         table_data = []
         for word in [word1, word2, word3]:
             table_data.append([word, ''.join([str(output[letter]) for letter in word])])
-        st.text(output)
+        st.text("Solution: " + output)
         st.table(table_data)
     else:
         st.error("No solution found for the given puzzle.")
