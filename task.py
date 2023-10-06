@@ -50,4 +50,4 @@ if st.button("Calculate"):
         st.text(result)
         st.table(table_data)
     else:
-        st.error("No solution found for the given puzzle.")
+        st.error("No solution found for these words")
